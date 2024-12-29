@@ -400,7 +400,6 @@ SOCIAL_LINKS = [
     "https://www.kirbyonkas.com/",
     "https://dapp.chainge.finance/?fromChain=KAS&toChain=KAS&fromToken=USDT&toToken=KIRBY",
     "https://kas.fyi/token/krc20/KIRBY",
-    "https://www.biconomy.com/exchange/KIRBY_USDT",
     "https://www.kaspiano.com/token/kirby?ref=kirby",
 ]
 
@@ -423,7 +422,7 @@ async def bot_send_messages(bot_token):
         try:
             # Zufällige Entscheidung: Nachricht, Bild oder Social Link senden
             choice = random.choices(
-                ["message", "image", "link"], weights=[0.7, 0.1, 0.2], k=1
+                ["message", "image", "link"], weights=[0.6, 0.2, 0.2], k=1
             )[0]
 
             if choice == "message":
